@@ -10,6 +10,7 @@
         <ul class="mt-4">
             <li *ngFor="let todo of todos; let i = index">
                 {{ todo }}
+                <button mat-raised-button color="warn" *ngIf="todos.length" (click)="removeTask(i)">Remove Task</button>
             </li>
         </ul>
         <button mat-raised-button color="warn" *ngIf="todos.length" (click)="remove()">Clear All</button>

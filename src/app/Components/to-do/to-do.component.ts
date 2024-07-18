@@ -25,4 +25,9 @@ export class ToDoComponent {
     this.todos = [];
     localStorage.clear();
   }
+
+  removeTask(i: number){
+    this._TodoService.removeTask(i);
+    this.todos = this._TodoService.getToDo();
+  }
 }

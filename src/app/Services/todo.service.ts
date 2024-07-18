@@ -28,5 +28,12 @@ export class TodoService {
   }
 
 
+  removeTask(i: number): void{
+
+      const todos = this.getToDo();
+      todos.splice(i, 1);
+      this.saveTodos(todos);
+   
+  }
 
 }

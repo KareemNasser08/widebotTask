@@ -1,0 +1,39 @@
+<div class="container">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Username</th>
+                <th scope="col">Email</th>
+                <th scope="col">Website</th>
+                <th scope="col">Address</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let item of usersList">
+                <td>
+                    <span class="fw-bold">{{item.id}}</span>
+                </td>
+                <td>
+                    <span class="text-success">{{item.name}}</span>
+                </td>
+                <td>
+                    {{item.username}}
+                </td>
+                <td class="fst-italic fs-6">
+                    {{item.email}}
+                </td>
+                <td>
+                    {{item.website}}
+                </td>
+                <td>
+                    <span class="text-danger">Street: </span> <small>{{item.address.street}}</small>
+                    |
+                    <span class="text-primary">City: </span> <small>{{item.address.city}}</small>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

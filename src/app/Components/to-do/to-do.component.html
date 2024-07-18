@@ -1,0 +1,18 @@
+<div class="container">
+
+    <div class="todo-app">
+        <h1>To-Do List</h1>
+        <mat-form-field class="w-100 p-2">
+            <mat-label>Enter New Task</mat-label>
+            <input type="text" class="p-0" matInput [(ngModel)]="newTodo">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="addTodo()">Add</button>
+        <ul class="mt-4">
+            <li *ngFor="let todo of todos; let i = index">
+                {{ todo }}
+            </li>
+        </ul>
+        <button mat-raised-button color="warn" *ngIf="todos.length" (click)="remove()">Clear All</button>
+    </div>
+
+</div>
